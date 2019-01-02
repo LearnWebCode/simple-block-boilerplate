@@ -15,16 +15,16 @@ wp.blocks.registerBlockType('brad/border-box', {
       props.setAttributes({color: value.hex})
     }
 
-    return React.createElement(
+    return wp.element.createElement(
       "div",
       null,
-      React.createElement(
+      wp.element.createElement(
         "h3",
         null,
         "Your Cool Border Box"
       ),
-      React.createElement("input", { type: "text", value: props.attributes.content, onChange: updateContent }),
-      React.createElement(wp.components.ColorPicker, { color: props.attributes.color, onChangeComplete: updateColor })
+      wp.element.createElement("input", { type: "text", value: props.attributes.content, onChange: updateContent }),
+      wp.element.createElement(wp.components.ColorPicker, { color: props.attributes.color, onChangeComplete: updateColor })
     );
   },
   save: function(props) {
